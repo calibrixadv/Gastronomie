@@ -22,6 +22,21 @@ public class Produs {
         this.categorie = categorie;
         this.kcal = kcal;
     }
+
+    public Produs(Produs other){
+        this.id = nextId++;
+        this.nume = other.nume;
+        this.pret = other.pret;
+        this.categorie = other.categorie;
+        this.kcal = other.kcal;
+    }
+
+    public String getNume() { return nume; }
+    public double getPret() { return pret; }
+    public int getCalorii() { return kcal; }
+    public String getCategorie() { return categorie; }
+    public int getKcal() { return kcal; }
+
     @Override
     public String toString() {
         return "Produs{" +

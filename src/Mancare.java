@@ -22,6 +22,28 @@ public final class Mancare extends Produs {
         this.alergeni = (alergeni != null) ? new ArrayList<>(alergeni) : new ArrayList<>();
     }
 
+    public Mancare(Mancare other){
+        super(other);
+
+        this.isCalda =  other.isCalda;
+
+        if(other.ingrediente != null){
+            this.ingrediente = new ArrayList<>(other.ingrediente);
+        } else {
+            this.ingrediente = new ArrayList<>();
+        }
+
+        if (other.alergeni != null) {
+            this.alergeni = new ArrayList<>(other.alergeni);
+        } else {
+            this.alergeni = new ArrayList<>();
+        }
+    }
+
+    public ArrayList<String> getListaIngrediente() { return ingrediente; }
+    public boolean getisCalda() { return isCalda; }
+    public ArrayList<String> getListaAlergeni() { return alergeni; }
+
     @Override
     public String toString() {
         String ing = (ingrediente == null || ingrediente.isEmpty())
