@@ -5,18 +5,29 @@ public class Restaurant extends LocalCulinar {
     private boolean acceptaRezervari;
     private boolean livrareLaDomiciliu;
 
-    public Restaurant(){
+    public Restaurant()
+    {
+
+        super();
+
         this.tipBucatarie = "none";
         this.numarLocuri = 0;
         this.acceptaRezervari = false;
-        this.livrareLaDomiciliu = false;
+        this.acceptaRezervari = false;
     }
 
-    public Restaurant(String tipBucatarie, int numarLocuri, boolean acceptaRezervari, boolean livrareLaDomiciliu){
+
+    public Restaurant(
+            String nume, String locatie, double rating,
+            String tipBucatarie, int numarLocuri, boolean acceptaRezervari, boolean livrareLaDomiciliu)
+    {
+
+        super(nume, locatie, rating);
+
         this.tipBucatarie = tipBucatarie;
         this.numarLocuri = numarLocuri;
         this.acceptaRezervari = acceptaRezervari;
-        this.acceptaRezervari = acceptaRezervari;
+        this.livrareLaDomiciliu = livrareLaDomiciliu;
     }
 
     @Override
