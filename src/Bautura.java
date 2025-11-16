@@ -79,7 +79,7 @@ public final class Bautura extends Produs {
     @Override
     public String toString() {
         return super.toString() +
-                " | Carbogazoasă: " + isCarbogazoasa +
+                " | Carbogazoasă: " + (isCarbogazoasa ? "Da" : "Nu") +
                 " | Alcoolică: " + isAlcoolica +
                 " | Ingrediente: " + ingrediente;
     }
