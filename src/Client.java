@@ -10,7 +10,7 @@ public class Client extends Persoana
         this.abonatNewsletter = false;
     }
 
-    // 2) Constructor cu toți parametrii
+    // 2) Constructor cu toti parametrii
     public Client(String nume, String email, String telefon,
                   int puncteFidelitate, boolean abonatNewsletter) {
         super(nume, email, telefon);
@@ -23,6 +23,24 @@ public class Client extends Persoana
         super(other);
         this.puncteFidelitate = other.puncteFidelitate;
         this.abonatNewsletter = other.abonatNewsletter;
+    }
+
+    // Getteri
+    public int getPuncteFidelitate() {
+        return puncteFidelitate;
+    }
+
+    public boolean isAbonatNewsletter() {
+        return abonatNewsletter;
+    }
+
+    // Setteri
+    public void setPuncteFidelitate(int puncteFidelitate) {
+        this.puncteFidelitate = puncteFidelitate;
+    }
+
+    public void setAbonatNewsletter(boolean abonatNewsletter) {
+        this.abonatNewsletter = abonatNewsletter;
     }
 
     @Override

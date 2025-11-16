@@ -6,15 +6,16 @@ public class Angajat extends Persoana
     private double salariu;
     private LocalDate dataAngajarii;
 
-    // 1) Default
+    // 1) Constructor default
     public Angajat() {
         super();
         this.functie = "";
         this.salariu = 0.0;
-        this.dataAngajarii = null;
+        // data default simpla
+        this.dataAngajarii = LocalDate.now();
     }
 
-    // 2) Full-args (fără id)
+    // 2) Constructor cu toti parametrii
     public Angajat(String nume, String email, String telefon,
                    String functie, double salariu, LocalDate dataAngajarii) {
         super(nume, email, telefon);
@@ -23,12 +24,38 @@ public class Angajat extends Persoana
         this.dataAngajarii = dataAngajarii;
     }
 
-    // 3) Copy
+    // 3) Constructor de copiere
     public Angajat(Angajat other) {
         super(other);
         this.functie = other.functie;
         this.salariu = other.salariu;
         this.dataAngajarii = other.dataAngajarii;
+    }
+
+    // Getteri
+    public String getFunctie() {
+        return functie;
+    }
+
+    public double getSalariu() {
+        return salariu;
+    }
+
+    public LocalDate getDataAngajarii() {
+        return dataAngajarii;
+    }
+
+    // Setteri
+    public void setFunctie(String functie) {
+        this.functie = functie;
+    }
+
+    public void setSalariu(double salariu) {
+        this.salariu = salariu;
+    }
+
+    public void setDataAngajarii(LocalDate dataAngajarii) {
+        this.dataAngajarii = dataAngajarii;
     }
 
     @Override

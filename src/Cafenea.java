@@ -1,21 +1,21 @@
 import java.time.LocalTime;
 
 public class Cafenea extends LocalCulinar {
-    private int capacitate;          // număr de locuri
+    private int capacitate;          // numar de locuri
     private boolean areTerasa;
     private LocalTime oraDeschidere;
     private LocalTime oraInchidere;
 
-    // 1) Constructor fără parametri
+    // 1) Constructor fara parametri
     public Cafenea() {
-        super(); // denumire="Necunoscut", locatie="Necunoscută", rating=0.0
+        super(); // denumire="Necunoscut", locatie="Necunoscuta", rating=0.0
         this.capacitate = 0;
         this.areTerasa = false;
         this.oraDeschidere = null;
         this.oraInchidere = null;
     }
 
-    // 2) Constructor cu toți parametrii (inclusiv cei din LocalCulinar)
+    // 2) Constructor cu toti parametrii
     public Cafenea(String denumire, String locatie, double rating,
                    int capacitate, boolean areTerasa,
                    LocalTime oraDeschidere, LocalTime oraInchidere) {
@@ -33,6 +33,40 @@ public class Cafenea extends LocalCulinar {
         this.areTerasa = other.areTerasa;
         this.oraDeschidere = other.oraDeschidere;
         this.oraInchidere = other.oraInchidere;
+    }
+
+    // Getteri
+    public int getCapacitate() {
+        return capacitate;
+    }
+
+    public boolean isAreTerasa() {
+        return areTerasa;
+    }
+
+    public LocalTime getOraDeschidere() {
+        return oraDeschidere;
+    }
+
+    public LocalTime getOraInchidere() {
+        return oraInchidere;
+    }
+
+    // Setteri
+    public void setCapacitate(int capacitate) {
+        this.capacitate = capacitate;
+    }
+
+    public void setAreTerasa(boolean areTerasa) {
+        this.areTerasa = areTerasa;
+    }
+
+    public void setOraDeschidere(LocalTime oraDeschidere) {
+        this.oraDeschidere = oraDeschidere;
+    }
+
+    public void setOraInchidere(LocalTime oraInchidere) {
+        this.oraInchidere = oraInchidere;
     }
 
     @Override

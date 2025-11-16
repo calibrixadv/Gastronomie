@@ -9,7 +9,7 @@ public abstract class Persoana
         this("", "", "");
     }
 
-    // 2) Constructor cu toți parametrii
+    // 2) Constructor cu toti parametrii
     public Persoana(String nume, String email, String telefon) {
         this.nume = nume;
         this.email = email;
@@ -19,6 +19,32 @@ public abstract class Persoana
     // 3) Constructor de copiere
     public Persoana(Persoana other) {
         this(other.nume, other.email, other.telefon);
+    }
+
+    // Getteri
+    public String getNume() {
+        return nume;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getTelefon() {
+        return telefon;
+    }
+
+    // Setteri
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setTelefon(String telefon) {
+        this.telefon = telefon;
     }
 
     @Override
