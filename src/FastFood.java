@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class FastFood extends LocalCulinar {
     private String tipBucatarie;
     private int numarProduse;
@@ -29,9 +31,10 @@ public class FastFood extends LocalCulinar {
     }
 
     @Override
-    public String toString() {
-        return super.toString() +
-                " | Tip bucătărie: " + tipBucatarie +
-                " | Număr produse: " + numarProduse;
-    }
+        public String toString() {
+            return super.toString() +
+                    " | Tip bucătărie: " + tipBucatarie +
+                    " | Număr produse: " + numarProduse +
+                    " | Lista sandwich-uri: " + Arrays.toString(listaSandwichuri);
+        }
 }

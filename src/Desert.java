@@ -1,44 +1,44 @@
 import java.util.ArrayList;
 
-public final class Bautura extends Produs {
-    private boolean isCarbogazoasa;
-    private boolean isAlcoolica;
-    private ArrayList<String> ingrediente;  // listă dinamică
+public final class Desert extends Produs {
+    private String tip;
+    private ArrayList<String> ingrediente;
+    private int portii;
 
-
-    public Bautura() {
+    public Desert() {
         super();
-        isCarbogazoasa = false;
-        isAlcoolica = false;
-        ingrediente = new ArrayList<>();
+        this.tip = "Necunoscut";
+        this.ingrediente = new ArrayList<>();
+        this.portii = 1;
     }
 
 
-    public Bautura(String nume, double pret, int kcal, String categorie,
-                   boolean isCarbogazoasa, boolean isAlcoolica, String[] ingredienteArray) {
+    public Desert(String nume, double pret, int kcal, String categorie,
+                  String tip, String[] ingredienteArray, int portii) {
         super(nume, pret, kcal, categorie);
-        this.isCarbogazoasa = isCarbogazoasa;
-        this.isAlcoolica = isAlcoolica;
+        this.tip = tip;
         this.ingrediente = new ArrayList<>();
         for (String ingr : ingredienteArray) {
             this.ingrediente.add(ingr);
         }
+        this.portii = portii;
     }
-    public Bautura(Bautura other) {
+
+
+    public Desert(Desert other) {
         super(other.getNume(), other.getPret(), other.getKcal(), other.getCategorie());
-        this.isCarbogazoasa = other.isCarbogazoasa;
-        this.isAlcoolica = other.isAlcoolica;
-        // clonare profundă a listei de ingrediente
+        this.tip = other.tip;
         this.ingrediente = new ArrayList<>();
         for (String ingr : other.ingrediente) {
             this.ingrediente.add(ingr);
         }
+        this.portii = other.portii;
     }
+
 
     public void adaugaIngredient(String ingredient) {
         ingrediente.add(ingredient);
     }
-
 
     public void stergeIngredient(int index) {
         if (index >= 0 && index < ingrediente.size()) {
@@ -48,32 +48,20 @@ public final class Bautura extends Produs {
         }
     }
 
-
     public void afiseazaIngrediente() {
         System.out.println("Ingrediente: " + ingrediente);
     }
 
-
-
-    public int getNumaIngrediente() {
+    public int getNumarIngrediente() {
         return ingrediente.size();
     }
 
-
-    public boolean isCarbogazoasa() {
-        return isCarbogazoasa;
+    public String getTip() {
+        return tip;
     }
 
-    public void setCarbogazoasa(boolean isCarbogazoasa) {
-        this.isCarbogazoasa = isCarbogazoasa;
-    }
-
-    public boolean isAlcoolica() {
-        return isAlcoolica;
-    }
-
-    public void setAlcoolica(boolean isAlcoolica) {
-        this.isAlcoolica = isAlcoolica;
+    public void setTip(String tip) {
+        this.tip = tip;
     }
 
     public ArrayList<String> getIngrediente() {
@@ -84,12 +72,19 @@ public final class Bautura extends Produs {
         this.ingrediente = ingrediente;
     }
 
+    public int getPortii() {
+        return portii;
+    }
+
+    public void setPortii(int portii) {
+        this.portii = portii;
+    }
 
     @Override
     public String toString() {
         return super.toString() +
-                " | Carbogazoasă: " + (isCarbogazoasa ? "Da" : "Nu") +
-                " | Alcoolică: " + isAlcoolica +
+                " | Tip: " + tip +
+                " | Portii: " + portii +
                 " | Ingrediente: " + ingrediente;
     }
 }
