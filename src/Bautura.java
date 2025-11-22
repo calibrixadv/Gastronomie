@@ -55,7 +55,7 @@ public final class Bautura extends Produs {
 
 
 
-    public int getNumaIngrediente() {
+    public int getNumarIngrediente() {
         return ingrediente.size();
     }
 

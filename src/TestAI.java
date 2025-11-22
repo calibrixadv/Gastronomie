@@ -145,6 +145,28 @@ public class TestAI {
             System.out.println(f);
         }
 
+        System.out.println("\n=== BAUTURI FILTRATE ===");
+        for (Bautura b : bauturi) {
+            if (b.isCarbogazoasa() && b.getPret() < 10) {
+                System.out.println(b);
+            }
+        }
+
+        System.out.println("\n=== DESERTURI FILTRATE ===");
+        for (Desert d : deserturi) {
+            if (d.getNumarIngrediente() > 3 && d.getPortii() >= 2) {
+                System.out.println(d);
+            }
+        }
+
+        System.out.println("\n=== FASTFOOD FILTRATE ===");
+        for (FastFood f : fastFoods) {
+            if (f.getRating() > 4.0 && f.getListaSandwichuri().length >= 2) {
+                System.out.println(f);
+            }
+        }
+
+
 
     }
 }

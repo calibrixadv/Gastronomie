@@ -30,6 +30,30 @@ public class FastFood extends LocalCulinar {
         this.listaSandwichuri = other.listaSandwichuri.clone();
     }
 
+    public String getTipBucatarie() {
+        return tipBucatarie;
+    }
+
+    public void setTipBucatarie(String tipBucatarie) {
+        this.tipBucatarie = tipBucatarie;
+    }
+
+    public int getNumarProduse() {
+        return numarProduse;
+    }
+
+    public void setNumarProduse(int numarProduse) {
+        this.numarProduse = numarProduse;
+    }
+
+    public String[] getListaSandwichuri() {
+        return listaSandwichuri;
+    }
+
+    public void setListaSandwichuri(String[] listaSandwichuri) {
+        this.listaSandwichuri = listaSandwichuri;
+    }
+
     @Override
         public String toString() {
             return super.toString() +

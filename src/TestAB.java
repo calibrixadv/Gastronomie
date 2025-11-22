@@ -116,7 +116,9 @@ public class TestAB {
 
         System.out.println("=== VECTOR PRODUSE (10 elemente) ===");
         printHeaderProduse();
-        for (int i = 0; i < vectorProduse.length; i++) {
+
+
+        for (int i = 0; i < vectorProduse.length; i+=2) {
             printProdusRow(i, vectorProduse[i], "");
         }
         System.out.println();
