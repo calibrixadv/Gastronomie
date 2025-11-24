@@ -36,6 +36,10 @@ public class Produs {
     public int getCalorii() { return kcal; }
     public String getCategorie() { return categorie; }
     public int getKcal() { return kcal; }
+    public void setNume(String nume) { this.nume = nume; }
+    public void setPret(double pret) { this.pret = pret; }
+    public void setCalorie(int kcal) { this.kcal = kcal; }
+    public void setCategorie(String categorie) { this.categorie = categorie; }
 
     @Override
     public String toString() {

@@ -1,0 +1,268 @@
+{
+"fastfood": [
+  {
+    "denumire": "McDonald's",
+    "locatie": "București",
+    "rating": 3.0,
+    "tipBucatarie": "Asiatic",
+    "numarProduse": 3,
+    "listaSandwichuri": ["Big Mac", "McChicken", "Filet-O-Fish"]
+  },
+  {
+    "denumire": "Burger King",
+    "locatie": "Cluj-Napoca",
+    "rating": 3.2,
+    "tipBucatarie": "International",
+    "numarProduse": 3,
+    "listaSandwichuri": ["Whopper", "Bacon King", "Chicken Fries"]
+  },
+  {
+    "denumire": "KFC",
+    "locatie": "Timișoara",
+    "rating": 3.4,
+    "tipBucatarie": "American",
+    "numarProduse": 3,
+    "listaSandwichuri": ["Zinger", "Original Recipe", "Popcorn Chicken"]
+  },
+  {
+    "denumire": "Subway",
+    "locatie": "Iași",
+    "rating": 3.6,
+    "tipBucatarie": "Spaniol",
+    "numarProduse": 3,
+    "listaSandwichuri": ["Sub cu Ton", "Sub cu Pui", "Sub Veggie"]
+  },
+  {
+    "denumire": "Pizza Hut",
+    "locatie": "Brașov",
+    "rating": 3.8,
+    "tipBucatarie": "Asiatic",
+    "numarProduse": 3,
+    "listaSandwichuri": ["Pizza Sandwich", "Cheesy Bread", "Stuffed Crust"]
+  },
+  {
+    "denumire": "Domino's",
+    "locatie": "Constanța",
+    "rating": 4.0,
+    "tipBucatarie": "International",
+    "numarProduse": 3,
+    "listaSandwichuri": ["Pepperoni Sandwich", "Chicken Sandwich", "Veggie Pizza"]
+  },
+  {
+    "denumire": "Starbucks",
+    "locatie": "Oradea",
+    "rating": 4.2,
+    "tipBucatarie": "American",
+    "numarProduse": 3,
+    "listaSandwichuri": ["Sandwich cu Pui", "Panini", "Bagel cu Cremă"]
+  },
+  {
+    "denumire": "Five Guys",
+    "locatie": "Sibiu",
+    "rating": 4.4,
+    "tipBucatarie": "Spaniol",
+    "numarProduse": 3,
+    "listaSandwichuri": ["Bacon Burger", "Cheeseburger", "Hot Dog"]
+  },
+  {
+    "denumire": "Dunkin' Donuts",
+    "locatie": "Ploiești",
+    "rating": 4.6,
+    "tipBucatarie": "Asiatic",
+    "numarProduse": 3,
+    "listaSandwichuri": ["Bagel cu Unt", "Sandwich cu Nutella", "Croissant"]
+  },
+  {
+    "denumire": "Panini Express",
+    "locatie": "Craiova",
+    "rating": 4.8,
+    "tipBucatarie": "International",
+    "numarProduse": 3,
+    "listaSandwichuri": ["Panini Caprese", "Panini Prosciutto", "Panini Veggie"]
+  }
+],
+"deserturi": [
+  {
+    "nume": "Tort Ciocolată",
+    "pret": 10.0,
+    "kcal": 300,
+    "categorie": "Tort",
+    "tip": "Dulce",
+    "portii": 1,
+    "ingrediente": ["Făină", "Zahăr", "Ouă", "Unt", "Ciocolată"]
+  },
+  {
+    "nume": "Prajitură cu Mere",
+    "pret": 11.0,
+    "kcal": 320,
+    "categorie": "Prajitură",
+    "tip": "Rece",
+    "portii": 2,
+    "ingrediente": ["Făină", "Mere", "Zahăr", "Scorțișoară"]
+  },
+  {
+    "nume": "Cheesecake",
+    "pret": 12.0,
+    "kcal": 340,
+    "categorie": "Cheesecake",
+    "tip": "Acrisoar",
+    "portii": 3,
+    "ingrediente": ["Brânză mascarpone", "Zahăr", "Ouă", "Biscuiți"]
+  },
+  {
+    "nume": "Tartă cu Cireșe",
+    "pret": 13.0,
+    "kcal": 360,
+    "categorie": "Tartă",
+    "tip": "Dulce",
+    "portii": 4,
+    "ingrediente": ["Făină", "Cireșe", "Zahăr", "Unt"]
+  },
+  {
+    "nume": "Tiramisu",
+    "pret": 14.0,
+    "kcal": 380,
+    "categorie": "Desert Italian",
+    "tip": "Rece",
+    "portii": 5,
+    "ingrediente": ["Ouă", "Zahăr", "Mascarpone", "Cafea", "Cacao"]
+  },
+  {
+    "nume": "Brownie cu Ciocolată",
+    "pret": 15.0,
+    "kcal": 400,
+    "categorie": "Brownie",
+    "tip": "Acrisoar",
+    "portii": 6,
+    "ingrediente": ["Făină", "Ciocolată", "Zahăr", "Unt"]
+  },
+  {
+    "nume": "Muffin cu Afine",
+    "pret": 16.0,
+    "kcal": 420,
+    "categorie": "Muffin",
+    "tip": "Dulce",
+    "portii": 7,
+    "ingrediente": ["Făină", "Zahăr", "Ouă", "Afine"]
+  },
+  {
+    "nume": "Clătite cu Nutella",
+    "pret": 17.0,
+    "kcal": 440,
+    "categorie": "Clătite",
+    "tip": "Rece",
+    "portii": 8,
+    "ingrediente": ["Făină", "Ouă", "Laptele", "Nutella"]
+  },
+  {
+    "nume": "Înghețată de Vanilie",
+    "pret": 18.0,
+    "kcal": 460,
+    "categorie": "Înghețată",
+    "tip": "Acrisoar",
+    "portii": 9,
+    "ingrediente": ["Lapte", "Zahăr", "Frișcă", "Vanilie"]
+  },
+  {
+    "nume": "Panna Cotta",
+    "pret": 19.0,
+    "kcal": 480,
+    "categorie": "Desert Italian",
+    "tip": "Dulce",
+    "portii": 10,
+    "ingrediente": ["Frișcă", "Zahăr", "Gelatină", "Vanilie"]
+  }
+],
+"bauturi": [
+  {
+    "nume": "Cola",
+    "pret": 3.5,
+    "kcal": 100,
+    "categorie": "Racoritoare",
+    "isCarbogazoasa": true,
+    "isAlcoolica": false,
+    "ingrediente": ["Apă carbogazoasă", "Zahăr", "Cofeină"]
+  },
+  {
+    "nume": "Pepsi",
+    "pret": 4.5,
+    "kcal": 110,
+    "categorie": "Racoritoare",
+    "isCarbogazoasa": true,
+    "isAlcoolica": false,
+    "ingrediente": ["Apă carbogazoasă", "Zahăr", "Cofeină"]
+  },
+  {
+    "nume": "Fanta Portocale",
+    "pret": 5.5,
+    "kcal": 120,
+    "categorie": "Racoritoare",
+    "isCarbogazoasa": true,
+    "isAlcoolica": false,
+    "ingrediente": ["Apă carbogazoasă", "Zahăr", "Arome naturale"]
+  },
+  {
+    "nume": "Sprite",
+    "pret": 6.5,
+    "kcal": 130,
+    "categorie": "Racoritoare",
+    "isCarbogazoasa": true,
+    "isAlcoolica": false,
+    "ingrediente": ["Apă carbogazoasă", "Arome naturale", "Zahăr"]
+  },
+  {
+    "nume": "Limonadă",
+    "pret": 7.5,
+    "kcal": 140,
+    "categorie": "Racoritoare",
+    "isCarbogazoasa": false,
+    "isAlcoolica": false,
+    "ingrediente": ["Apă", "Zahăr", "Lămâie"]
+  },
+  {
+    "nume": "Apă minerală",
+    "pret": 8.5,
+    "kcal": 150,
+    "categorie": "Racoritoare",
+    "isCarbogazoasa": false,
+    "isAlcoolica": false,
+    "ingrediente": ["Apă minerală"]
+  },
+  {
+    "nume": "Cafea Latte",
+    "pret": 9.5,
+    "kcal": 160,
+    "categorie": "Calda",
+    "isCarbogazoasa": false,
+    "isAlcoolica": false,
+    "ingrediente": ["Cafea", "Lapte", "Zahăr"]
+  },
+  {
+    "nume": "Ceai Verde",
+    "pret": 10.5,
+    "kcal": 170,
+    "categorie": "Calda",
+    "isCarbogazoasa": false,
+    "isAlcoolica": false,
+    "ingrediente": ["Ceai verde", "Lămâie", "Miere"]
+  },
+  {
+    "nume": "Smoothie Banane",
+    "pret": 11.5,
+    "kcal": 180,
+    "categorie": "Racoritoare",
+    "isCarbogazoasa": false,
+    "isAlcoolica": false,
+    "ingrediente": ["Banane", "Lapte", "Miere"]
+  },
+  {
+    "nume": "Bere Blondă",
+    "pret": 12.5,
+    "kcal": 190,
+    "categorie": "Racoritoare",
+    "isCarbogazoasa": true,
+    "isAlcoolica": true,
+    "ingrediente": ["Hamei", "Malț", "Apă"]
+  }
+]
+}
