@@ -1,6 +1,7 @@
 // Cerinta:
 // 1) 3 instante (default, param, copy) pentru Angajat, Client, Cafenea – afisate in tabel
 // 2) Vector cu 10 instante din fiecare clasa – afisate in tabel
+// 3) Afisarea instantelor din vectori care respecta doua conditii combinate (&&) pe datele membre
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -137,6 +138,46 @@ public class TestAAA {
             printCafeneaRow(i, cafenele[i], "vector");
         }
         System.out.println();
+
+        // ==============================
+        // 4. Afisare filtrata dupa conditii
+        // ==============================
+
+        // Angajati cu salariu >= 3400 si data angajarii dupa 2024-03-01
+        System.out.println("=== ANGAJATI filtrati (salariu >= 3400 si data angajarii dupa 2024-03-01) ===");
+        printHeaderAngajati();
+        for (int i = 0; i < angajati.length; i++) {
+            Angajat a = angajati[i];
+            if (a.getSalariu() >= 3400 &&
+                    a.getDataAngajarii().isAfter(LocalDate.of(2024, 3, 1))) { // doua conditii combinate cu &&
+                printAngajatRow(i, a, "filtrat");
+            }
+        }
+        System.out.println();
+
+        // Clienti cu puncteFidelitate >= 30 si abonati la newsletter
+        System.out.println("=== CLIENTI filtrati (puncte >= 30 si abonat newsletter) ===");
+        printHeaderClienti();
+        for (int i = 0; i < clienti.length; i++) {
+            Client c = clienti[i];
+            if (c.getPuncteFidelitate() >= 30 && c.isAbonatNewsletter()) {   // doua conditii combinate cu &&
+                printClientRow(i, c, "filtrat");
+            }
+        }
+        System.out.println();
+
+        // Cafenele cu rating >= 4.0 si care au terasa
+        System.out.println("=== CAFENELE filtrate (rating >= 4.0 si terasa) ===");
+        printHeaderCafenele();
+        for (int i = 0; i < cafenele.length; i++) {
+            Cafenea cf = cafenele[i];
+            if (cf.getRating() >= 4.0 && cf.isAreTerasa()) {                 // doua conditii combinate cu &&
+                printCafeneaRow(i, cf, "filtrat");
+            }
+        }
+        System.out.println();
+
+
     }
 
     // ==========================
