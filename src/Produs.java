@@ -7,6 +7,7 @@ public class Produs {
 
     private static int nextId = 1;
 
+    // Constructor fara parametri
     public Produs() {
         this.id = nextId++;
         this.nume = "none";
@@ -15,6 +16,7 @@ public class Produs {
         this.kcal = 0;
     }
 
+    // Constructor cu toti parametrii
     public Produs(String nume, double pret, int kcal, String categorie) {
         this.id = nextId++;
         this.nume = nume;
@@ -23,7 +25,9 @@ public class Produs {
         this.kcal = kcal;
     }
 
-    public Produs(Produs other){
+    // Constructor de copiere
+    public Produs(Produs other) {
+        // copie cu ID nou; daca vrei acelasi id, pune this.id = other.id;
         this.id = nextId++;
         this.nume = other.nume;
         this.pret = other.pret;
@@ -31,11 +35,48 @@ public class Produs {
         this.kcal = other.kcal;
     }
 
-    public String getNume() { return nume; }
-    public double getPret() { return pret; }
-    public int getCalorii() { return kcal; }
-    public String getCategorie() { return categorie; }
-    public int getKcal() { return kcal; }
+    // Getteri / setteri
+
+    public int getId() {
+        return id;
+    }
+
+    public String getNume() {
+        return nume;
+    }
+
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
+    public double getPret() {
+        return pret;
+    }
+
+    public void setPret(double pret) {
+        this.pret = pret;
+    }
+
+    public String getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(String categorie) {
+        this.categorie = categorie;
+    }
+
+    public int getKcal() {
+        return kcal;
+    }
+
+    // alias, daca profesorul foloseste "calorii" prin curs
+    public int getCalorii() {
+        return kcal;
+    }
+
+    public void setKcal(int kcal) {
+        this.kcal = kcal;
+    }
 
     @Override
     public String toString() {
