@@ -12,23 +12,25 @@ public class AAA_GUI_App extends JFrame {
     private JTextField txtCond2;
     private JComboBox<String> cmbClasa;
     private JTextArea output;
+    private JLabel lblCond1;
+    private JLabel lblCond2;
 
-    // "Vectorii" cu care lucrăm
+    // Vectorii pentru cele 3 clase
     private Angajat[] angajati;
     private Client[] clienti;
     private Cafenea[] cafenele;
 
     public AAA_GUI_App() {
-        setTitle("Filtrare Angajati / Clienti / Cafenele");
+        setTitle("Aplicatie Gastronomica - AAA");
         setSize(800, 500);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        // ---------------- TOP: back + filtre ----------------
-        JPanel topWrapper = new JPanel(new BorderLayout());
+        // -------- TOP: buton Back + filtre --------
+        JPanel panelTopWrapper = new JPanel(new BorderLayout());
 
         JButton btnBack = new JButton("< Back");
-        topWrapper.add(btnBack, BorderLayout.WEST);
+        panelTopWrapper.add(btnBack, BorderLayout.WEST);
 
         JPanel panelTop = new JPanel(new GridLayout(3, 2, 10, 10));
 
@@ -36,42 +38,69 @@ public class AAA_GUI_App extends JFrame {
         cmbClasa = new JComboBox<>(new String[]{"Angajat", "Client", "Cafenea"});
         panelTop.add(cmbClasa);
 
-        panelTop.add(new JLabel("Condiție 1:"));
+        lblCond1 = new JLabel();
         txtCond1 = new JTextField();
+        panelTop.add(lblCond1);
         panelTop.add(txtCond1);
 
-        panelTop.add(new JLabel("Condiție 2:"));
+        lblCond2 = new JLabel();
         txtCond2 = new JTextField();
+        panelTop.add(lblCond2);
         panelTop.add(txtCond2);
 
-        topWrapper.add(panelTop, BorderLayout.CENTER);
-        add(topWrapper, BorderLayout.NORTH);
+        panelTopWrapper.add(panelTop, BorderLayout.CENTER);
+        add(panelTopWrapper, BorderLayout.NORTH);
 
-        // ---------------- ZONA AFIȘARE ----------------
+        // -------- ZONA AFISARE --------
         output = new JTextArea();
         output.setEditable(false);
         add(new JScrollPane(output), BorderLayout.CENTER);
 
-        // ---------------- BUTON FILTRARE ----------------
+        // -------- BUTON FILTRARE --------
         JButton btnFilter = new JButton("Filtrează");
         add(btnFilter, BorderLayout.SOUTH);
 
-        // ---------------- LISTENERS ----------------
+        // -------- LISTENERS --------
         btnFilter.addActionListener(e -> aplicaFiltre());
 
         btnBack.addActionListener(e -> {
-            dispose();
+            dispose();          // închide fereastra curentă
             new MainWindow();   // revine la meniul principal
         });
 
-        // ---------------- INITIALIZARE DATE + FIȘIERE ----------------
-        initializareDate();          // umple vectorii cu 10 elemente ca în TestAAA
-        salveazaVectoriInFisiere();  // cerința 6
+        cmbClasa.addActionListener(e -> actualizeazaEticheteConditii());
+        actualizeazaEticheteConditii();  // setare inițială
+
+        // -------- INITIALIZARE DATE + SCRIERE IN FISIERE --------
+        initializareDate();         // vectori cu 10 elemente, ca in TestAAA
+        salveazaVectoriInFisiere(); // cerinta 6: toti vectorii in fisiere
 
         setVisible(true);
     }
 
-    // ==================== Cerința 2: vectorii cu 10 instanțe ====================
+    // ================== Etichete dinamice pentru condiții ==================
+    private void actualizeazaEticheteConditii() {
+        String clasa = (String) cmbClasa.getSelectedItem();
+
+        if ("Angajat".equals(clasa)) {
+            lblCond1.setText("Salariu minim:");
+            lblCond2.setText("An minim angajare:");
+            txtCond1.setToolTipText("Ex: 3400");
+            txtCond2.setToolTipText("Ex: 2024");
+        } else if ("Client".equals(clasa)) {
+            lblCond1.setText("Puncte min fidelitate:");
+            lblCond2.setText("Abonat newsletter (1 = DA, 0 = NU):");
+            txtCond1.setToolTipText("Ex: 30");
+            txtCond2.setToolTipText("1 = DA, 0 = NU");
+        } else if ("Cafenea".equals(clasa)) {
+            lblCond1.setText("Rating minim:");
+            lblCond2.setText("Capacitate minimă:");
+            txtCond1.setToolTipText("Ex: 4.0");
+            txtCond2.setToolTipText("Ex: 40");
+        }
+    }
+
+    // ================== Initializare vectori (ca in TestAAA) ==================
     private void initializareDate() {
         // vector Angajat
         angajati = new Angajat[10];
@@ -113,17 +142,27 @@ public class AAA_GUI_App extends JFrame {
         }
     }
 
-    // ==================== Cerința 6: 2 fișiere cu 2 vectori ====================
+    // ================== Cerinta 6: toti vectorii in fisiere ==================
     private void salveazaVectoriInFisiere() {
         salveazaAngajatiInFisier("angajati.txt");
+        salveazaClientiInFisier("clienti.txt");
         salveazaCafeneleInFisier("cafenele.txt");
-        // (dacă vrei, poți face și pentru clienți, dar cerința zice „doi vectori”)
     }
 
     private void salveazaAngajatiInFisier(String numeFisier) {
         try (PrintWriter pw = new PrintWriter(new FileWriter(numeFisier))) {
             for (Angajat a : angajati) {
                 pw.println(a.toString());
+            }
+        } catch (IOException e) {
+            System.out.println("Eroare la scrierea " + numeFisier + ": " + e.getMessage());
+        }
+    }
+
+    private void salveazaClientiInFisier(String numeFisier) {
+        try (PrintWriter pw = new PrintWriter(new FileWriter(numeFisier))) {
+            for (Client c : clienti) {
+                pw.println(c.toString());
             }
         } catch (IOException e) {
             System.out.println("Eroare la scrierea " + numeFisier + ": " + e.getMessage());
@@ -140,47 +179,39 @@ public class AAA_GUI_App extends JFrame {
         }
     }
 
-    // ==================== Cerința 4 + 5: metode de filtrare + GUI ====================
-
+    // ================== Cerinta 4 + 5: filtrare dupa 2 conditii ==================
     private void aplicaFiltre() {
         output.setText("");
 
         String clasa = (String) cmbClasa.getSelectedItem();
 
         try {
-            switch (clasa) {
-                case "Angajat": {
-                    // Condiție 1: salariu minim (double)
-                    // Condiție 2: anul minim al angajării (int)
-                    double salariuMin = Double.parseDouble(txtCond1.getText());
-                    int anMin = Integer.parseInt(txtCond2.getText());
-                    filtreazaAngajati(salariuMin, anMin);
-                    break;
-                }
-                case "Client": {
-                    // Condiție 1: puncte min fidelitate (int)
-                    // Condiție 2: abonat newsletter? (1 = da, 0 = nu)
-                    int puncteMin = Integer.parseInt(txtCond1.getText());
-                    int abonatInt = Integer.parseInt(txtCond2.getText());
-                    boolean abonat = (abonatInt == 1);
-                    filtreazaClienti(puncteMin, abonat);
-                    break;
-                }
-                case "Cafenea": {
-                    // Condiție 1: rating minim (double)
-                    // Condiție 2: capacitate minimă (int)
-                    double ratingMin = Double.parseDouble(txtCond1.getText());
-                    int capacitateMin = Integer.parseInt(txtCond2.getText());
-                    filtreazaCafenele(ratingMin, capacitateMin);
-                    break;
-                }
+            if ("Angajat".equals(clasa)) {
+                // Cond.1: salariu minim (double)
+                // Cond.2: an minim al angajarii (int)
+                double salariuMin = Double.parseDouble(txtCond1.getText());
+                int anMin = Integer.parseInt(txtCond2.getText());
+                filtreazaAngajati(salariuMin, anMin);
+            } else if ("Client".equals(clasa)) {
+                // Cond.1: puncte min
+                // Cond.2: 1 = abonat, 0 = neabonat
+                int puncteMin = Integer.parseInt(txtCond1.getText());
+                int abonatInt = Integer.parseInt(txtCond2.getText());
+                boolean abonat = (abonatInt == 1);
+                filtreazaClienti(puncteMin, abonat);
+            } else if ("Cafenea".equals(clasa)) {
+                // Cond.1: rating minim
+                // Cond.2: capacitate minima
+                double ratingMin = Double.parseDouble(txtCond1.getText());
+                int capacitateMin = Integer.parseInt(txtCond2.getText());
+                filtreazaCafenele(ratingMin, capacitateMin);
             }
         } catch (NumberFormatException ex) {
             output.setText("⚠ Introdu valori numerice valide în cele două câmpuri!");
         }
     }
 
-    // >>> Astea sunt practic cele "două metode" din cerință (noi facem 3, câte una pe clasă) <<<
+    // === metodele care parcurg vectorii si afiseaza instantele care satisfac cele 2 conditii ===
 
     private void filtreazaAngajati(double salariuMin, int anMin) {
         output.append("=== Angajati cu salariu >= " + salariuMin +

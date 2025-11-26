@@ -1,0 +1,10 @@
+Cafenea{local=Local: Cafenea 0 | Locație: Zona 0 | Rating: 3.5, capacitate=20, areTerasa=true, oraDeschidere=07:00, oraInchidere=21:00}
+Cafenea{local=Local: Cafenea 1 | Locație: Zona 1 | Rating: 3.8, capacitate=25, areTerasa=false, oraDeschidere=08:00, oraInchidere=21:00}
+Cafenea{local=Local: Cafenea 2 | Locație: Zona 2 | Rating: 4.1, capacitate=30, areTerasa=true, oraDeschidere=09:00, oraInchidere=21:00}
+Cafenea{local=Local: Cafenea 3 | Locație: Zona 3 | Rating: 3.5, capacitate=35, areTerasa=false, oraDeschidere=07:00, oraInchidere=21:00}
+Cafenea{local=Local: Cafenea 4 | Locație: Zona 4 | Rating: 3.8, capacitate=40, areTerasa=true, oraDeschidere=08:00, oraInchidere=21:00}
+Cafenea{local=Local: Cafenea 5 | Locație: Zona 5 | Rating: 4.1, capacitate=45, areTerasa=false, oraDeschidere=09:00, oraInchidere=21:00}
+Cafenea{local=Local: Cafenea 6 | Locație: Zona 6 | Rating: 3.5, capacitate=50, areTerasa=true, oraDeschidere=07:00, oraInchidere=21:00}
+Cafenea{local=Local: Cafenea 7 | Locație: Zona 7 | Rating: 3.8, capacitate=55, areTerasa=false, oraDeschidere=08:00, oraInchidere=21:00}
+Cafenea{local=Local: Cafenea 8 | Locație: Zona 8 | Rating: 4.1, capacitate=60, areTerasa=true, oraDeschidere=09:00, oraInchidere=21:00}
+Cafenea{local=Local: Cafenea 9 | Locație: Zona 9 | Rating: 3.5, capacitate=65, areTerasa=false, oraDeschidere=07:00, oraInchidere=21:00}
