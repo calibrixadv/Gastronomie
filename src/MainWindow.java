@@ -14,17 +14,23 @@ public class MainWindow extends JFrame {
             setLayout(new GridLayout(3, 1, 10, 10));
 
             JButton btnB1 = new JButton("AAA");
-            JButton btnB2 = new JButton("AB");
+            JButton btnAB = new JButton("AB");
             JButton btnAI = new JButton("AI");
 
             add(btnB1);
-            add(btnB2);
+            add(btnAB);
             add(btnAI);
 
             // ---------------- ASCULTATOR pentru AI -------------------
             btnAI.addActionListener(e -> {
                 dispose();           // închide MainWindow
                 new AI_GUI_App();        // deschide fereastra AI
+            });
+
+            // ---------------- ASCULTATOR pentru AB -------------------
+            btnAB.addActionListener(e -> {
+                dispose();           // închide MainWindow
+                new AB_GUI_App();        // deschide fereastra AI
             });
 
             setVisible(true);
