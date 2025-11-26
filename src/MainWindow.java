@@ -28,6 +28,13 @@ public class MainWindow extends JFrame {
             });
 
             setVisible(true);
+
+            // ---------------- ASCULTATOR pentru AAA (partea ta) -------------------
+            btnB1.addActionListener(e -> {
+                dispose();            // închide MainWindow
+                new AAA_GUI_App();    // deschide GUI-ul pentru Angajat/Client/Cafenea
+            });
+
         }
 
     }
