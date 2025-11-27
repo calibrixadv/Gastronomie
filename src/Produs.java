@@ -35,18 +35,7 @@ public class Produs {
         this.kcal = other.kcal;
     }
 
-<<<<<<< HEAD
-    public String getNume() { return nume; }
-    public double getPret() { return pret; }
-    public int getCalorii() { return kcal; }
-    public String getCategorie() { return categorie; }
-    public int getKcal() { return kcal; }
-    public void setNume(String nume) { this.nume = nume; }
-    public void setPret(double pret) { this.pret = pret; }
-    public void setCalorie(int kcal) { this.kcal = kcal; }
-    public void setCategorie(String categorie) { this.categorie = categorie; }
-=======
-    // Getteri / setteri
+
 
     public int getId() {
         return id;
@@ -88,7 +77,7 @@ public class Produs {
     public void setKcal(int kcal) {
         this.kcal = kcal;
     }
->>>>>>> e2860b212535d071a64e3a6729662c156bcc7438
+
 
     @Override
     public String toString() {

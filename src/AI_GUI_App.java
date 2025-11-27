@@ -365,7 +365,7 @@ public class AI_GUI_App extends JFrame {
 
                 d.setNume(nume);
                 d.setPret(pret);
-                d.setCalorie(kcal);
+                d.setKcal(kcal);
                 d.setCategorie(categorie);
                 d.setTip(tip);
                 d.setPortii(portii);
@@ -384,7 +384,7 @@ public class AI_GUI_App extends JFrame {
 
                 b.setNume(nume);
                 b.setPret(pret);
-                b.setCalorie(kcal);
+                b.setKcal(kcal);
                 b.setCategorie(categorie);
                 b.setCarbogazoasa(carb);
                 b.setAlcoolica(alc);
