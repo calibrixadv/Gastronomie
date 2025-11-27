@@ -1,0 +1,17 @@
+Filtru 1 aplicat: rating minim = 1.0
+Filtru 2 aplicat: numar minim de locuri = 1
+
+=== RESTAURANTE cu rating >= 1.0 SI locuri >= 1 ===
+
+Nr  | Tip      | Nume                 | Locatie                |   Rating | Tip bucatarie   |   Locuri | Rezervari  | Livrare   
+----+----------+----------------------+----------------------+----------+-----------------+----------+------------+------------
+0   | filtrat  | La Bunica            | Str. Principala 1      |     4.60 | Traditionala    |       80 | DA         | DA        
+1   | filtrat  | Pizza Max            | Bd. Unirii 25          |     4.20 | Italiana        |       60 | DA         | DA        
+2   | filtrat  | Burger House         | Str. Libertatii 10     |     4.80 | FastFood        |       40 | DA         | DA        
+3   | filtrat  | Vegan Spot           | Str. Verde 5           |     4.40 | Vegana          |       30 | NU         | DA        
+4   | filtrat  | Coffee Corner        | Str. Mihai 7           |     4.10 | Cafea & Desert  |       25 | NU         | NU        
+5   | filtrat  | Steak House          | Bd. Independentei 15   |     4.90 | Steak           |      100 | DA         | NU        
+6   | filtrat  | Sushi Bar            | Str. Japoniei 3        |     4.70 | Japoneza        |       35 | DA         | DA        
+7   | filtrat  | Casa Mare            | Str. Larga 20          |     3.90 | Romanesca       |      120 | DA         | NU        
+8   | filtrat  | Express Lunch        | Str. Rapida 8          |     4.00 | FastFood        |       20 | NU         | DA        
+9   | filtrat  | Fine Dine            | Str. Eleganta 2        |     4.95 | Gourmet         |       50 | DA         | DA        

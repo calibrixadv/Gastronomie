@@ -7,6 +7,7 @@ public class Produs {
 
     private static int nextId = 1;
 
+    // Constructor fara parametri
     public Produs() {
         this.id = nextId++;
         this.nume = "none";
@@ -15,6 +16,7 @@ public class Produs {
         this.kcal = 0;
     }
 
+    // Constructor cu toti parametrii
     public Produs(String nume, double pret, int kcal, String categorie) {
         this.id = nextId++;
         this.nume = nume;
@@ -23,7 +25,9 @@ public class Produs {
         this.kcal = kcal;
     }
 
-    public Produs(Produs other){
+    // Constructor de copiere
+    public Produs(Produs other) {
+        // copie cu ID nou; daca vrei acelasi id, pune this.id = other.id;
         this.id = nextId++;
         this.nume = other.nume;
         this.pret = other.pret;
@@ -31,6 +35,7 @@ public class Produs {
         this.kcal = other.kcal;
     }
 
+<<<<<<< HEAD
     public String getNume() { return nume; }
     public double getPret() { return pret; }
     public int getCalorii() { return kcal; }
@@ -40,6 +45,50 @@ public class Produs {
     public void setPret(double pret) { this.pret = pret; }
     public void setCalorie(int kcal) { this.kcal = kcal; }
     public void setCategorie(String categorie) { this.categorie = categorie; }
+=======
+    // Getteri / setteri
+
+    public int getId() {
+        return id;
+    }
+
+    public String getNume() {
+        return nume;
+    }
+
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
+    public double getPret() {
+        return pret;
+    }
+
+    public void setPret(double pret) {
+        this.pret = pret;
+    }
+
+    public String getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(String categorie) {
+        this.categorie = categorie;
+    }
+
+    public int getKcal() {
+        return kcal;
+    }
+
+    // alias, daca profesorul foloseste "calorii" prin curs
+    public int getCalorii() {
+        return kcal;
+    }
+
+    public void setKcal(int kcal) {
+        this.kcal = kcal;
+    }
+>>>>>>> e2860b212535d071a64e3a6729662c156bcc7438
 
     @Override
     public String toString() {

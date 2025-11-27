@@ -1,301 +1,191 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class TestAB {
+
+    // =======================
+    // METODE PENTRU VECTORI
+    // =======================
+
+    public static Produs[] getVectorProduse() {
+        Produs[] v = new Produs[10];
+
+        v[0] = new Produs("Cafea mica", 7.0, 5, "Bautura");
+        v[1] = new Produs("Cafea mare", 10.0, 8, "Bautura");
+        v[2] = new Produs("Ceai verde", 9.5, 0, "Bautura");
+        v[3] = new Produs("Suc natural", 13.0, 150, "Bautura");
+        v[4] = new Produs("Croissant", 8.0, 320, "Desert");
+        v[5] = new Produs("Cheesecake", 18.0, 500, "Desert");
+        v[6] = new Produs("Salata Caesar", 24.0, 380, "Mancare");
+        v[7] = new Produs("Pizza Margherita", 28.0, 900, "Mancare");
+        v[8] = new Produs("Apa plata 0.5L", 5.0, 0, "Bautura");
+        v[9] = new Produs("Limonada", 12.0, 120, "Bautura");
+
+        return v;
+    }
+
+    public static Mancare[] getVectorMancaruri() {
+        Mancare[] v = new Mancare[10];
+
+        // ingrediente
+        ArrayList<String> ingCaesar     = new ArrayList<>(Arrays.asList("Salata", "Pui", "Crutoane", "Parmezan"));
+        ArrayList<String> ingMargherita = new ArrayList<>(Arrays.asList("Faina", "Apa", "Mozzarella", "Rosii"));
+        ArrayList<String> ingCarbonara  = new ArrayList<>(Arrays.asList("Paste", "Smantana", "Bacon", "Parmezan"));
+        ArrayList<String> ingGreceasca  = new ArrayList<>(Arrays.asList("Salata", "Rosii", "Castraveti", "Masline"));
+        ArrayList<String> ingSupa       = new ArrayList<>(Arrays.asList("Morcov", "Telina", "Cartof"));
+        ArrayList<String> ingBurger     = new ArrayList<>(Arrays.asList("Chifla", "Carne vita", "Cascaval"));
+        ArrayList<String> ingWedges     = new ArrayList<>(Arrays.asList("Cartofi", "Ulei", "Condimente"));
+        ArrayList<String> ingWrap       = new ArrayList<>(Arrays.asList("Lipie", "Pui", "Legume"));
+        ArrayList<String> ingBruschete  = new ArrayList<>(Arrays.asList("Paine", "Rosii", "Usturoi"));
+        ArrayList<String> ingTiramisu   = new ArrayList<>(Arrays.asList("Piscoturi", "Mascarpone", "Cafea"));
+
+        // alergeni
+        ArrayList<String> algCaesar     = new ArrayList<>(Arrays.asList("Lactoza"));
+        ArrayList<String> algMargherita = new ArrayList<>(Arrays.asList("Gluten"));
+        ArrayList<String> algCarbonara  = new ArrayList<>(Arrays.asList("Lactoza", "Gluten"));
+        ArrayList<String> algGreceasca  = new ArrayList<>();
+        ArrayList<String> algSupa       = new ArrayList<>();
+        ArrayList<String> algBurger     = new ArrayList<>(Arrays.asList("Gluten", "Lactoza"));
+        ArrayList<String> algWedges     = new ArrayList<>();
+        ArrayList<String> algWrap       = new ArrayList<>(Arrays.asList("Gluten"));
+        ArrayList<String> algBruschete  = new ArrayList<>(Arrays.asList("Gluten"));
+        ArrayList<String> algTiramisu   = new ArrayList<>(Arrays.asList("Lactoza", "Gluten"));
+
+        v[0] = new Mancare("Salata Caesar",        24.0, 380, "Mancare", ingCaesar,     true,  algCaesar);
+        v[1] = new Mancare("Pizza Margherita",     28.0, 900, "Mancare", ingMargherita, true,  algMargherita);
+        v[2] = new Mancare("Paste Carbonara",      26.0, 850, "Mancare", ingCarbonara,  true,  algCarbonara);
+        v[3] = new Mancare("Salata Greceasca",     20.0, 250, "Mancare", ingGreceasca,  false, algGreceasca);
+        v[4] = new Mancare("Supa crema de legume", 18.0, 200, "Mancare", ingSupa,       true,  algSupa);
+        v[5] = new Mancare("Burger Vita",          32.0, 950, "Mancare", ingBurger,     true,  algBurger);
+        v[6] = new Mancare("Cartofi wedges",       14.0, 400, "Mancare", ingWedges,     true,  algWedges);
+        v[7] = new Mancare("Wrap pui",             22.0, 600, "Mancare", ingWrap,       true,  algWrap);
+        v[8] = new Mancare("Bruschete",            16.0, 320, "Mancare", ingBruschete,  false, algBruschete);
+        v[9] = new Mancare("Tiramisu",             19.0, 500, "Desert",  ingTiramisu,   false, algTiramisu);
+
+        return v;
+    }
+
+    public static Restaurant[] getVectorRestaurante() {
+        Restaurant[] v = new Restaurant[10];
+
+        v[0] = new Restaurant("La Bunica",      "Str. Principala 1",     4.6,  "Traditionala",    80,  true,  true);
+        v[1] = new Restaurant("Pizza Max",      "Bd. Unirii 25",         4.2,  "Italiana",        60,  true,  true);
+        v[2] = new Restaurant("Burger House",   "Str. Libertatii 10",    4.8,  "FastFood",        40,  true,  true);
+        v[3] = new Restaurant("Vegan Spot",     "Str. Verde 5",          4.4,  "Vegana",          30,  false, true);
+        v[4] = new Restaurant("Coffee Corner",  "Str. Mihai 7",          4.1,  "Cafea & Desert",  25,  false, false);
+        v[5] = new Restaurant("Steak House",    "Bd. Independentei 15",  4.9,  "Steak",           100, true,  false);
+        v[6] = new Restaurant("Sushi Bar",      "Str. Japoniei 3",       4.7,  "Japoneza",        35,  true,  true);
+        v[7] = new Restaurant("Casa Mare",      "Str. Larga 20",         3.9,  "Romanesca",       120, true,  false);
+        v[8] = new Restaurant("Express Lunch",  "Str. Rapida 8",         4.0,  "FastFood",        20,  false, true);
+        v[9] = new Restaurant("Fine Dine",      "Str. Eleganta 2",       4.95, "Gourmet",         50,  true,  true);
+
+        return v;
+    }
+
+    // =======================
+    // METODE DE TEST / AFISARE
+    // =======================
+
     public static void main(String[] args) {
 
-        // ============================================
-        // 1. PRODUSE – folosim toti constructorii
-        // ============================================
+        // 1) Cel putin 3 instante din fiecare clasa, folosind TOTI constructorii
 
-        // Constructor fara parametri
-        Produs produsDefault = new Produs();
+        System.out.println("=== TEST CONSTRUCTORI PRODUS ===");
+        Produs pDefault = new Produs();
+        Produs pParam   = new Produs("Sandwich", 15.5, 450, "FastFood");
+        Produs pCopy    = new Produs(pParam);
 
-        // Constructor cu parametri
-        Produs produsParam = new Produs("Apa plata 0.5L", 5.0, 0, "Bautura");
-
-        // Constructor de copiere
-        Produs produsCopy = new Produs(produsParam);
-
-        // Afisare ca tabel pentru cele 3 instante
-        System.out.println("=== PRODUSE (3 instante: default, param, copy) ===");
         printHeaderProduse();
-        printProdusRow(0, produsDefault, "default");
-        printProdusRow(1, produsParam,   "param");
-        printProdusRow(2, produsCopy,    "copy");
+        printProdusRow(0, pDefault, "default");
+        printProdusRow(1, pParam,   "param");
+        printProdusRow(2, pCopy,    "copie");
         System.out.println();
 
+        System.out.println("=== TEST CONSTRUCTORI MANCARE ===");
+        ArrayList<String> ingEx = new ArrayList<>(Arrays.asList("Paine", "Sunca", "Cascaval"));
+        ArrayList<String> algEx = new ArrayList<>(Arrays.asList("Gluten", "Lactoza"));
+        Mancare mDefault = new Mancare();
+        Mancare mParam   = new Mancare("Burger", 22.0, 700, "FastFood", ingEx, true, algEx);
+        Mancare mCopy    = new Mancare(mParam);
 
-        // ============================================
-        // 2. MANCARE – folosim toti constructorii
-        // ============================================
-
-        // Constructor fara parametri
-        Mancare mancareDefault = new Mancare();
-
-        // Pregatim liste pentru constructorul cu parametri
-        ArrayList<String> ingBurger = new ArrayList<>();
-        ingBurger.add("Chifla");
-        ingBurger.add("Carne vita");
-        ingBurger.add("Cascaval");
-
-        ArrayList<String> alergeniBurger = new ArrayList<>();
-        alergeniBurger.add("Gluten");
-        alergeniBurger.add("Lactate");
-
-        // Constructor cu parametri
-        Mancare mancareParam = new Mancare(
-                "Burger clasic",
-                32.0,
-                850,
-                "Fel principal",
-                ingBurger,
-                true,
-                alergeniBurger
-        );
-
-        // Constructor de copiere
-        Mancare mancareCopy = new Mancare(mancareParam);
-
-        System.out.println("=== MANCARE (3 instante: default, param, copy) ===");
         printHeaderMancare();
-        printMancareRow(0, mancareDefault, "default");
-        printMancareRow(1, mancareParam,   "param");
-        printMancareRow(2, mancareCopy,    "copy");
+        printMancareRow(0, mDefault, "default");
+        printMancareRow(1, mParam,   "param");
+        printMancareRow(2, mCopy,    "copie");
         System.out.println();
 
+        System.out.println("=== TEST CONSTRUCTORI RESTAURANT ===");
+        Restaurant rDefault = new Restaurant();
+        Restaurant rParam   = new Restaurant("La Bunica", "Str. Exemplu 10", 4.6,
+                "Traditionala", 80, true, true);
+        Restaurant rCopy    = new Restaurant(rParam);
 
-        // ============================================
-        // 3. RESTAURANT – folosim toti constructorii
-        // ============================================
-
-        // Constructor fara parametri
-        Restaurant restaurantDefault = new Restaurant();
-
-        // Constructor cu parametri
-        Restaurant restaurantParam = new Restaurant(
-                "Trattoria Roma",
-                "Galati, Str. Domneasca 50",
-                4.6,
-                "Italiana",
-                60,
-                true,
-                true
-        );
-
-        // Constructor de copiere
-        Restaurant restaurantCopy = new Restaurant(restaurantParam);
-
-        System.out.println("=== RESTAURANTE (3 instante: default, param, copy) ===");
         printHeaderRestaurante();
-        printRestaurantRow(0, restaurantDefault, "default");
-        printRestaurantRow(1, restaurantParam,   "param");
-        printRestaurantRow(2, restaurantCopy,    "copy");
+        printRestaurantRow(0, rDefault, "default");
+        printRestaurantRow(1, rParam,   "param");
+        printRestaurantRow(2, rCopy,    "copie");
         System.out.println();
 
+        // 2) Vector de 10 elemente pentru fiecare clasa + afisare
 
-        // ==================================================
-        // 4. VECTORI cu cel putin 10 instante / clasa
-        //    (amestecam default, param, copy + obiecte noi)
-        // ==================================================
-
-        // -----------------------
-        // 4.1. Vector PRODUSE
-        // -----------------------
-        Produs[] vectorProduse = new Produs[10];
-        vectorProduse[0] = produsDefault;
-        vectorProduse[1] = produsParam;
-        vectorProduse[2] = produsCopy;
-        vectorProduse[3] = new Produs("Cheesecake", 18.5,450 ,  "Desert");
-        vectorProduse[4] = new Produs("Espresso", 7.0, 2, "Bautura");
-        vectorProduse[5] = new Produs("Latte", 10.0, 120, "Bautura");
-        vectorProduse[6] = new Produs("Brownie", 15.0, 380, "Desert");
-        vectorProduse[7] = new Produs("Apa minerala 0.5L", 6.0, 0, "Bautura");
-        vectorProduse[8] = new Produs("Ciocolata calda", 12.0, 200, "Bautura");
-        // Ultimul il facem copie dupa unul din celelalte
-        vectorProduse[9] = new Produs(vectorProduse[3]); // copy Cheesecake
+        Produs[]     vectorProduse     = getVectorProduse();
+        Mancare[]    vectorMancaruri   = getVectorMancaruri();
+        Restaurant[] vectorRestaurante = getVectorRestaurante();
 
         System.out.println("=== VECTOR PRODUSE (10 elemente) ===");
         printHeaderProduse();
-
-
-        for (int i = 0; i < vectorProduse.length; i+=2) {
-            printProdusRow(i, vectorProduse[i], "");
+        for (int i = 0; i < vectorProduse.length; i++) {
+            printProdusRow(i, vectorProduse[i], "vector");
         }
         System.out.println();
-
-
-        // -----------------------
-        // 4.2. Vector MANCARE
-        // -----------------------
-        Mancare[] vectorMancaruri = new Mancare[10];
-        vectorMancaruri[0] = mancareDefault;
-        vectorMancaruri[1] = mancareParam;
-        vectorMancaruri[2] = mancareCopy;
-
-        vectorMancaruri[3] = new Mancare(
-                "Salata fresh",
-                24.0,
-                250,
-                "Aperitiv",
-                new ArrayList<String>() {{
-                    add("Salata verde");
-                    add("Rosii");
-                    add("Castraveti");
-                }},
-                false,
-                new ArrayList<String>()
-        );
-        vectorMancaruri[4] = new Mancare(
-                "Paste Carbonara",
-                28.0,
-                700,
-                "Fel principal",
-                new ArrayList<String>() {{
-                    add("Paste");
-                    add("Ou");
-                    add("Pancetta");
-                }},
-                true,
-                new ArrayList<String>() {{
-                    add("Gluten");
-                    add("Lactate");
-                    add("Ou");
-                }}
-        );
-        vectorMancaruri[5] = new Mancare(
-                "Ciorba de vacuta",
-                22.0,
-                300,
-                "Fel principal",
-                new ArrayList<String>() {{
-                    add("Carne vita");
-                    add("Legume");
-                }},
-                true,
-                new ArrayList<String>()
-        );
-        vectorMancaruri[6] = new Mancare(
-                "Paine cu usturoi",
-                10.0,
-                200,
-                "Aperitiv",
-                new ArrayList<String>() {{
-                    add("Paine");
-                    add("Usturoi");
-                    add("Ulei masline");
-                }},
-                true,
-                new ArrayList<String>() {{
-                    add("Gluten");
-                }}
-        );
-        vectorMancaruri[7] = new Mancare(
-                "Cartofi wedges",
-                14.0,
-                350,
-                "Garnitura",
-                new ArrayList<String>() {{
-                    add("Cartofi");
-                    add("Condimente");
-                }},
-                true,
-                new ArrayList<String>()
-        );
-        vectorMancaruri[8] = new Mancare(
-                "Salata Caesar",
-                26.0,
-                380,
-                "Aperitiv",
-                new ArrayList<String>() {{
-                    add("Salata romana");
-                    add("Crutoane");
-                    add("Piept de pui");
-                }},
-                false,
-                new ArrayList<String>() {{
-                    add("Gluten");
-                }}
-        );
-        // al 10-lea il facem copie dupa unul existent
-        vectorMancaruri[9] = new Mancare(vectorMancaruri[4]); // copy Carbonara
 
         System.out.println("=== VECTOR MANCARE (10 elemente) ===");
         printHeaderMancare();
         for (int i = 0; i < vectorMancaruri.length; i++) {
-            printMancareRow(i, vectorMancaruri[i], "");
+            printMancareRow(i, vectorMancaruri[i], "vector");
         }
         System.out.println();
-
-
-        // -----------------------
-        // 4.3. Vector RESTAURANTE
-        // -----------------------
-        Restaurant[] vectorRestaurante = new Restaurant[10];
-        vectorRestaurante[0] = restaurantDefault;
-        vectorRestaurante[1] = restaurantParam;
-        vectorRestaurante[2] = restaurantCopy;
-
-        vectorRestaurante[3] = new Restaurant(
-                "Casa Bunicii",
-                "Galati, Micro 38",
-                4.2,
-                "Traditionala",
-                80,
-                true,
-                false
-        );
-        vectorRestaurante[4] = new Restaurant(
-                "Bistro Urban",
-                "Galati, Centru",
-                4.0,
-                "Internationala",
-                40,
-                true,
-                true
-        );
-        vectorRestaurante[5] = new Restaurant(
-                "Sushi House",
-                "Galati, Mazepa",
-                4.8,
-                "Japoneza",
-                30,
-                true,
-                false
-        );
-        vectorRestaurante[6] = new Restaurant(
-                "Burger House",
-                "Galati, Tiglina",
-                4.1,
-                "Fast-food",
-                50,
-                false,
-                true
-        );
-        vectorRestaurante[7] = new Restaurant(
-                "La Dunare",
-                "Galati, Faleza",
-                4.7,
-                "Peste & Fructe de mare",
-                70,
-                true,
-                false
-        );
-        vectorRestaurante[8] = new Restaurant(
-                "Vegan Spot",
-                "Galati, Centru",
-                4.3,
-                "Vegan",
-                35,
-                true,
-                true
-        );
-        // al 10-lea este copie dupa unul din celelalte
-        vectorRestaurante[9] = new Restaurant(vectorRestaurante[7]); // copy La Dunare
 
         System.out.println("=== VECTOR RESTAURANTE (10 elemente) ===");
         printHeaderRestaurante();
         for (int i = 0; i < vectorRestaurante.length; i++) {
-            printRestaurantRow(i, vectorRestaurante[i], "");
+            printRestaurantRow(i, vectorRestaurante[i], "vector");
+        }
+        System.out.println();
+
+        // 3) Afisare pe baza a DOUA conditii combinate (cerinta sapt. 3–5.12)
+
+        // Produs: pret > 10 SI kcal > 0
+        System.out.println("=== PRODUSE cu pret > 10 si Kcal > 0 ===");
+        printHeaderProduse();
+        for (int i = 0; i < vectorProduse.length; i++) {
+            Produs p = vectorProduse[i];
+            if (p.getPret() > 10.0 && p.getKcal() > 0) {
+                printProdusRow(i, p, "filtrat");
+            }
+        }
+        System.out.println();
+
+        // Mancare: este calda SI are cel putin 1 alergen
+        System.out.println("=== MANCARE calda si cu cel putin 1 alergen ===");
+        printHeaderMancare();
+        for (int i = 0; i < vectorMancaruri.length; i++) {
+            Mancare m = vectorMancaruri[i];
+            int nrAlg = (m.getListaAlergeni() != null) ? m.getListaAlergeni().size() : 0;
+            if (m.getisCalda() && nrAlg > 0) {
+                printMancareRow(i, m, "filtrat");
+            }
+        }
+        System.out.println();
+
+        // Restaurant: rating >= 4.5 SI livrare la domiciliu
+        System.out.println("=== RESTAURANTE cu rating >= 4.5 si livrare la domiciliu ===");
+        printHeaderRestaurante();
+        for (int i = 0; i < vectorRestaurante.length; i++) {
+            Restaurant r = vectorRestaurante[i];
+            if (r.getRating() >= 4.5 && r.getisLivrareLaDomiciliu()) {
+                printRestaurantRow(i, r, "filtrat");
+            }
         }
         System.out.println();
     }
@@ -303,70 +193,73 @@ public class TestAB {
     // ==========================
     // FUNCTII AUXILIARE – PRODUSE
     // ==========================
+
     private static void printHeaderProduse() {
-        System.out.printf("%-3s | %-8s | %-25s | %8s | %8s | %-12s%n",
-                "Idx", "Tip", "Nume", "Pret", "Kcal", "Categorie");
-        System.out.println("--------------------------------------------------------------------------");
+        System.out.printf("%-3s | %-8s | %-20s | %-12s | %8s | %8s%n",
+                "Nr", "Tip", "Nume", "Categorie", "Pret", "Kcal");
+        System.out.println("----+----------+----------------------+--------------+----------+----------");
     }
 
     private static void printProdusRow(int idx, Produs p, String tip) {
-        // ajusteaza getKcal() -> getCalorii() daca asa e in clasa ta
-        System.out.printf("%-3d | %-8s | %-25s | %8.2f | %8d | %-12s%n",
+        if (p == null) return;
+        System.out.printf("%-3d | %-8s | %-20s | %-12s | %8.2f | %8d%n",
                 idx,
                 tip,
                 p.getNume(),
+                p.getCategorie(),
                 p.getPret(),
-                p.getKcal(),
-                p.getCategorie()
+                p.getKcal()
         );
     }
 
     // ==========================
     // FUNCTII AUXILIARE – MANCARE
     // ==========================
+
     private static void printHeaderMancare() {
-        System.out.printf("%-3s | %-8s | %-20s | %8s | %8s | %-12s | %-7s | %-7s | %-7s%n",
-                "Idx", "Tip", "Nume", "Pret", "Kcal", "Categorie",
-                "Calda?", "NrIng", "NrAlrg");
-        System.out.println("-------------------------------------------------------------------------------------------------");
+        System.out.printf("%-3s | %-8s | %-20s | %-6s | %-12s | %-12s | %-12s | %8s | %8s%n",
+                "Nr", "Tip", "Nume", "Calda", "NrIngred.", "NrAlerg.", "Categorie", "Pret", "Kcal");
+        System.out.println("----+----------+----------------------+--------+--------------+--------------+--------------+----------+----------");
     }
 
     private static void printMancareRow(int idx, Mancare m, String tip) {
+        if (m == null) return;
         int nrIng = (m.getListaIngrediente() != null) ? m.getListaIngrediente().size() : 0;
-        int nrAlerg = (m.getListaAlergeni() != null) ? m.getListaAlergeni().size() : 0;
+        int nrAlg = (m.getListaAlergeni() != null) ? m.getListaAlergeni().size() : 0;
 
-        System.out.printf("%-3d | %-8s | %-20s | %8.2f | %8d | %-12s | %-7s | %-7d | %-7d%n",
+        System.out.printf("%-3d | %-8s | %-20s | %-6s | %-12d | %-12d | %-12s | %8.2f | %8d%n",
                 idx,
                 tip,
                 m.getNume(),
-                m.getPret(),
-                m.getKcal(),
-                m.getCategorie(),
                 m.getisCalda() ? "DA" : "NU",
                 nrIng,
-                nrAlerg
+                nrAlg,
+                m.getCategorie(),
+                m.getPret(),
+                m.getKcal()
         );
     }
 
     // ==========================
     // FUNCTII AUXILIARE – RESTAURANTE
     // ==========================
+
     private static void printHeaderRestaurante() {
-        System.out.printf("%-3s | %-8s | %-20s | %-25s | %6s | %-15s | %-10s | %-10s%n",
-                "Idx", "Tip", "Denumire", "Locatie", "Rating", "Tip bucatarie",
-                "Rezervari", "Livrare");
-        System.out.println("----------------------------------------------------------------------------------------------------------------");
+        System.out.printf("%-3s | %-8s | %-20s | %-22s | %8s | %-15s | %8s | %-10s | %-10s%n",
+                "Nr", "Tip", "Nume", "Locatie", "Rating", "Tip bucatarie", "Locuri", "Rezervari", "Livrare");
+        System.out.println("----+----------+----------------------+----------------------+----------+-----------------+----------+------------+------------");
     }
 
     private static void printRestaurantRow(int idx, Restaurant r, String tip) {
-        System.out.printf("%-3d | %-8s | %-20s | %-25s | %6.2f | %-15s | %-10s | %-10s%n",
+        if (r == null) return;
+        System.out.printf("%-3d | %-8s | %-20s | %-22s | %8.2f | %-15s | %8d | %-10s | %-10s%n",
                 idx,
                 tip,
-                r.getDenumire(),      // sau getNume() daca asa e la tine
+                r.getDenumire(),
                 r.getLocatie(),
                 r.getRating(),
-                r.getNumarLocuri(),
                 r.getTipBucatarie(),
+                r.getNumarLocuri(),
                 r.getisAcceptaRezervari() ? "DA" : "NU",
                 r.getisLivrareLaDomiciliu() ? "DA" : "NU"
         );

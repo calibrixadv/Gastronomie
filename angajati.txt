@@ -1,0 +1,10 @@
+Angajat{persoana=Persoana{nume='Angajat0', email='angajat0@firma.com', telefon='070000000'}, functie='Functie0', salariu=3000.0, dataAngajarii=2024-01-01}
+Angajat{persoana=Persoana{nume='Angajat1', email='angajat1@firma.com', telefon='071111111'}, functie='Functie1', salariu=3100.0, dataAngajarii=2024-02-01}
+Angajat{persoana=Persoana{nume='Angajat2', email='angajat2@firma.com', telefon='072222222'}, functie='Functie2', salariu=3200.0, dataAngajarii=2024-03-01}
+Angajat{persoana=Persoana{nume='Angajat3', email='angajat3@firma.com', telefon='073333333'}, functie='Functie3', salariu=3300.0, dataAngajarii=2024-04-01}
+Angajat{persoana=Persoana{nume='Angajat4', email='angajat4@firma.com', telefon='074444444'}, functie='Functie4', salariu=3400.0, dataAngajarii=2024-05-01}
+Angajat{persoana=Persoana{nume='Angajat5', email='angajat5@firma.com', telefon='075555555'}, functie='Functie5', salariu=3500.0, dataAngajarii=2024-06-01}
+Angajat{persoana=Persoana{nume='Angajat6', email='angajat6@firma.com', telefon='076666666'}, functie='Functie6', salariu=3600.0, dataAngajarii=2024-07-01}
+Angajat{persoana=Persoana{nume='Angajat7', email='angajat7@firma.com', telefon='077777777'}, functie='Functie7', salariu=3700.0, dataAngajarii=2024-08-01}
+Angajat{persoana=Persoana{nume='Angajat8', email='angajat8@firma.com', telefon='078888888'}, functie='Functie8', salariu=3800.0, dataAngajarii=2024-09-01}
+Angajat{persoana=Persoana{nume='Angajat9', email='angajat9@firma.com', telefon='079999999'}, functie='Functie9', salariu=3900.0, dataAngajarii=2024-10-01}

@@ -1,0 +1,17 @@
+Filtru 1 aplicat: pret minim = 1.0
+Filtru 2 aplicat: Kcal maxim = 9999
+
+=== PRODUSE cu pret >= 1.0 SI kcal <= 9999 ===
+
+Nr  | Tip      | Nume                 | Categorie    |     Pret |     Kcal
+----+----------+----------------------+--------------+----------+----------
+0   | filtrat  | Cafea mica           | Bautura      |     7.00 |        5
+1   | filtrat  | Cafea mare           | Bautura      |    10.00 |        8
+2   | filtrat  | Ceai verde           | Bautura      |     9.50 |        0
+3   | filtrat  | Suc natural          | Bautura      |    13.00 |      150
+4   | filtrat  | Croissant            | Desert       |     8.00 |      320
+5   | filtrat  | Cheesecake           | Desert       |    18.00 |      500
+6   | filtrat  | Salata Caesar        | Mancare      |    24.00 |      380
+7   | filtrat  | Pizza Margherita     | Mancare      |    28.00 |      900
+8   | filtrat  | Apa plata 0.5L       | Bautura      |     5.00 |        0
+9   | filtrat  | Limonada             | Bautura      |    12.00 |      120

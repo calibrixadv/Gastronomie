@@ -1,0 +1,10 @@
+Client{persoana=Persoana{nume='Client0', email='client0@mail.com', telefon='07012345'}, puncteFidelitate=0, abonatNewsletter=true}
+Client{persoana=Persoana{nume='Client1', email='client1@mail.com', telefon='07123456'}, puncteFidelitate=10, abonatNewsletter=false}
+Client{persoana=Persoana{nume='Client2', email='client2@mail.com', telefon='07234567'}, puncteFidelitate=20, abonatNewsletter=true}
+Client{persoana=Persoana{nume='Client3', email='client3@mail.com', telefon='07345678'}, puncteFidelitate=30, abonatNewsletter=false}
+Client{persoana=Persoana{nume='Client4', email='client4@mail.com', telefon='07456789'}, puncteFidelitate=40, abonatNewsletter=true}
+Client{persoana=Persoana{nume='Client5', email='client5@mail.com', telefon='075678910'}, puncteFidelitate=50, abonatNewsletter=false}
+Client{persoana=Persoana{nume='Client6', email='client6@mail.com', telefon='0767891011'}, puncteFidelitate=60, abonatNewsletter=true}
+Client{persoana=Persoana{nume='Client7', email='client7@mail.com', telefon='07789101112'}, puncteFidelitate=70, abonatNewsletter=false}
+Client{persoana=Persoana{nume='Client8', email='client8@mail.com', telefon='078910111213'}, puncteFidelitate=80, abonatNewsletter=true}
+Client{persoana=Persoana{nume='Client9', email='client9@mail.com', telefon='0791011121314'}, puncteFidelitate=90, abonatNewsletter=false}
